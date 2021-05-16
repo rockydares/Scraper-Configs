@@ -1,0 +1,85 @@
+{
+    "torrentgalaxy": {
+        "name": "TorrentGalaxy",
+        "url": "https://torrentgalaxy.to/torrents.php?search={{query}}&sort=id&order=desc&page={{page:0}}",
+        "list": "div.tgxtablerow",
+        "result": {
+            "name": [
+                "div:nth-of-type(4) div a",
+                "@title"
+            ],
+            "url": [
+                "div:nth-of-type(4) div a",
+                "@href"
+            ],
+            "size": "div:nth-of-type(8)",
+            "seeds": "div:nth-of-type(10)"
+        }
+    },
+    "torrentgalaxy/item": {
+        "name": "TorrentGalaxy/item",
+        "url": "https://torrentgalaxy.to{{item}}",
+        "result": {
+            "infohash": [
+                "div.torrentpagetable div.tprow:nth-of-type(7) div:nth-of-type(2)"
+            ]
+        }
+    },
+    "1337x": {
+        "name": "1337X",
+        "url": "http://1337x.to/sort-search/{{query}}/seeders/desc/{{page:1}}/",
+        "list": ".box-info-detail table.table tr",
+        "result": {
+            "name": [
+                ".coll-1 a:nth-child(2)"
+            ],
+            "url": [
+                ".coll-1 a:nth-child(2)",
+                "@href"
+            ],
+            "seeds": ".coll-2",
+            "peers": ".coll-3",
+            "size": [
+                ".coll-4",
+                "/([\\d\\.]+ [KMGT]?B)/"
+            ]
+        }
+    },
+    "1337x/item": {
+        "name": "1337X (Item)",
+        "url": "http://1337x.to{{item}}",
+        "result": {
+            "magnet": [
+                "a[href^='magnet:']",
+                "@href"
+            ]
+        }
+    },
+    "lt": {
+        "name": "limetorrents",
+        "url": "https://www.limetorrents.cc/search/all/{{query}}/seeds/{{page:1}}/",
+        "list": ".table2 tbody tr",
+        "result": {
+            "name": [
+                ".tt-name a:nth-child(2)"
+            ],
+            "url": [
+                ".tt-name a:nth-child(2)",
+                "@href"
+            ],
+            "size": "td:nth-child(3)",
+            "seeds": "td:nth-child(4)",
+            "peers": "td:nth-child(5)"
+        }
+    },
+    "lt/item": {
+        "name": "limetorrents (Item)",
+        "url": "https://www.limetorrents.cc{{item}}",
+        "result": {
+            "magnet": [
+                "a.csprite_dltorrent[href^=\"magnet:\"]",
+                "@href"
+            ]
+        }
+    }
+}
