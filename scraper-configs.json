@@ -45,7 +45,7 @@
             ]
         }
     },
-    "1337x/item": {
+    "tbp/item": {
         "name": "1337X (Item)",
         "url": "http://1337x.to{{item}}",
         "result": {
