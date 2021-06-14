@@ -27,7 +27,7 @@
     },
     "1337x": {
         "name": "1337X",
-        "url": "http://1337x.to/sort-search/{{query}}/seeders/desc/{{page:1}}/",
+        "url": "https://1337x.to/sort-search/{{query}}/seeders/desc/{{page:1}}/",
         "list": ".box-info-detail table.table tr",
         "result": {
             "name": [
@@ -47,7 +47,7 @@
     },
     "1337x/item": {
         "name": "1337X (Item)",
-        "url": "http://1337x.to{{item}}",
+        "url": "https://1337x.to{{item}}",
         "result": {
             "magnet": [
                 "a[href^='magnet:']",
